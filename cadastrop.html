@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+</head>
+<body>
+    <div class="interface">
+        <header>
+            <hgroup>
+                <h1>CADASTRO DE PRODUTO</h1>
+            </hgroup>
+        </header>
+
+        <form class="cadastro" action="principal.html" method="post">
+            <div class="cadp">
+                <p class="nomes_cadastrop">Nome do Produto: </p>
+                <input type="text" name="nomep" required>
+            </div>
+            <div class="cadp">
+                <p class="nomes_cadastrop">Código do Produto: </p>
+                <input type="number" name="codigop" required>
+            </div>
+            <div class="cadp">
+                <p class="nomes_cadastrop">Imagem do Produto: </p>
+                <input type="file" name="fotop" accept="image/*" required>
+            </div>
+            <div class="cadp">
+                <p class="nomes_cadastrop">Preço (R$): </p>
+                <input type="number" name="precop" required>
+            </div>
+            <div class="cadp">
+                <p class="nomes_cadastrop">Quantidade: </p>
+                <input type="number" name="quantidadep required">
+            </div>
+            <button type="submit">Cadastrar Cliente</button>
+        </form>
+    </div>
+</body>
+</html>
