@@ -4,14 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: forestgreen;
+            margin: 0;
+        }
+
+        .interface {
+            background-color: gray;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 420px;
+            text-align: left;
+        }
+
+        header h1 {
+            color: lawngreen;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .interface p {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .interface .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .interface .btn:hover {
+            background-color: #218838;
+            color: #fff;
+        }
+
+        .interface .btn-secondary {
+            background-color: #28a745 !important;
+            border-color: #28a745 !important;
+            color: #ffffff !important;
+        }
+
+        .interface .btn-secondary:hover {
+            background-color: #218838 !important;
+            border-color: #1e7e34;
+        }
+    </style>
 </head>
 <body>
     <div class="interface">
-        <button type="submit">
-            <a href="principal.html">
-                Voltar
-            </a>
-        </button>
+        <a href="principal.html" class="btn btn-secondary mb-4 w-100 fw-bold">
+            Voltar
+        </a>
         
         <br>
         <br>
@@ -26,6 +96,7 @@
             img {
                 width: 100px;
                 height: 100px;
+
                 object-fit: contain;
             }
         </style>
@@ -34,14 +105,12 @@
         <p>Água Sanitária Qboa 2L: R$ 5.00</p>
         3 Unidades
 
-        <br>
-        <br>
-        <br>
+        <br><br>
 
         <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEhUSEBEWERMVFRIVFRgVEBcYFhIQFhUXGBcYFhYYHSkgJBonGxYVIj0hJSkrMi4uFyAzODMsNzQtLisBCgoKDg0OGxAQGi0lICUyLTUwMS0uLi0tLi8tLS0tLy0tLS0yLS0tLS0vLS0tLS0vLS0tLS0vLy8tLS0vLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABHEAABAwIEAwUDBgsFCQAAAAABAAIDBBEFEiExBkFRBxMiYXEygZEUI0KhwdEkM1JicoKisbKzwjVDU5KjNGNkdIOk8PHy/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAMEBQIBBv/EAD4RAQACAQIDAgsFBgUFAAAAAAABAgMEERIhMQVBIjJRYXGBkaGx0fATFDPB4QYVI0JSkhZDY3LiNGKCovH/2gAMAwEAAhEDEQA/ALxQEBAQEBAQEBAQEBBo+MOImYfTmZwzuJDI23tnkINgT0ABJ8guL34I3WdLp51GTgidvL6FL4lxLW1biZp3WP0GOLIwOmRp199yqF72t1l9fpdFgxR4FY9M859rlR4jVU/jgqJGgb5XOyX6Fh0PvC4re1Z5Ss5dNhyxtkpE+rn7eq1+AeKvl8bmyACeK2ewsHtN8rwOWxBHl5q/hy8cc+r5HtPQxpbxw+LPTzeZK1MzBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEFZdtFLH3cL8ozl8gJ6gRmyr6jpDX7ImZvaJ6bfmq2nAVSX0+KOTItouE+0Jf2Q07XV73G92QPLbEgXL2N1A30J3VrT9Xz/bU7Y4iO+V0K4+aEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQVv20/iYP05f5ar6jpDW7I/Et6PzVRT7KpL6jF0ZHJcLHcmnY7/t0v/LO/mRq3p+svne3PEr6Vxq2+bEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQVZ2yYnA9sULJWvlY9+djTcsDmW8VtAb20Ouqmx6C+ojyR5dneHtOmitMzHFM92+ysoSRy+tTfuPf8AzPd+qx/i+KdMO/8A5f8AFkX0T9w/6nu/U/xr/of+/wDxSzssr4qese6eRsQfEY25jYOeXtNs2w0bzsuL9l3weFWeL1f/AFDn7fx66IrNeGY8+/5QusFVkT6gICAgICAgICAgICAgICAgICAgICAg66idkbXPe4MY0FznE2DWgXJJ6L2ImZ2gUzxn2jzVJdFRkwwagvGkko9d2t8hr1tstfTaGtfCvzn3Qz9RqJ22qgcYWmybSy4oyeS9V7WiGR3J6L1Fxw4lqOolIeGOM6mhs2/fQf4bj7I/3bvo+m3kqWo0VMvOOUtHTa6+PlbnC48BxqCtiEsDrjZwPtMd+S4dVh5cVsVuGzcx5K5K8VWxUaQQEBAQEBAQEBAQEBAQEBAQEBAQEFU9tGPOvHRMNgQJZrfS1IjafK7S63k1aWgxb73n1K+a3cq1a9WXliZd0RXalaGypKhreS9VMmOZbE1YkFg0D0XkRsr2rMMeqoyBe69d0y9zVyutovFyleLo3/A+MSUdTG5tyyV7IpByLXuDQfUE3+I5qlq8dctJ8sc2rpd8Ux51+LAbAgICAgICAgICAgICAgICAgICAgIPPfaJI5+JVRcfZexo8mtjYBb9/vW9o6x9jH13srV5ZrfZG1ZiXNq7w5MNlJEqWSkw72vXqHgmZ2h2Mr8uwv6rzjSfcZt407PslfM/nYeQ+9c8UpKaHBTu3Z+DUF3B8r2geI+Lo0XcdeQCiyX7oWq0rHSNkv4ZgFfiLLC8FLaT2hYvH4s23tmF9PydVS1Fvs8M+W31KxhrxZPNC3FkNAQEBAQEBAQEBAQEBAQEBAQEBAQEFJ9sWCuhqhVNHzdQGhx6TsblsfVjWn9Vy1tDl3pweT4Kuakb77IC1XohDaXIFdxOyDJTjhlU9OZpGxtFr/dcry93OLFFI87lNG1trbfW4aX35pEupdkVtNjbbbVp+0I5bqtzRxeG9jlLdHaiSNwLdre03b430CijnLpbPAXDgoaYB2s0tnyk8nW0aNAbAdeZKx9Vn+1vv3R0aWHHwVSVVkogICAgICAgICAgICAgICAgICAgIMLGMLhq4XwTtzMeLHqDyc08nA6grql7UtxVeTETG0vMs0eUkXvZzhfrY2uvoqzvWLMyb+HNPI4XXrybRDMpojo4WNwQR09fqK99KL7XeHZNnJu8m+mvMG1hYX/9LqIjZHOR3xsIty1O3J25A8W3PzXMvYtukuDBk1VRxWaW98w2sLZGF0gadNg7vG+ep5qrm3rjvPmWcXO9YXcsNqCAgICAgICAgICAgICAgICAgICAgIPjjYXQeWZXX16lx+JX0lfEhi/59nWvamboyqZ5abg2Kk23UbTs20UzZBZ49684Zjo8jLHe7nwWHUfvHIbe9cLNZZHCMmXEKUk/3zRvzcC0b26j6/RQ6mN8NvQtYPHqv1YDWEBAQEBAQEBAQEBAQEBAQEBAQEBAQdNW/LG89GuPwBXsDy1H7DfQL6SekMSv41hKvc3RkRKWFCzPpl0rZGQ6oLPMHcfcubV3d6fJMGHS5amB7TtPA4e6Rp/80UGSPAtE+Sfg18c84mPM9GL5xsCAgICAgICAgICAgICAgICAgICAgIMHHX5aac9IZT8GFdV6wS8x/Rb6L6SekMTH+JZ8C8qZujJiUqjdnUy6Vsj7Vo8xMKnqO7e1xGYNc1xHUNIJHvsocnOJhr6fo9OwSte1rmm7XAOB6tIuCvmZjbk3HNAQEBAQEBAQEBAQEBAQEBAQEBAQEGt4khe+kqGRi73QTNaL2u5zCBqfMrqkxFomXk9FIu7PcSsPmm7f4zPvWxOtw7dWbTS5ItMz3umbgWvY0vkbGxg1LnVEbWgeZJsvaazFM7Rv7DLprzHd7XCq4YqYImTPyGN5DWOZK14cSCdC0nSzTqvMnaenxePMx6peafsbU6q3Di2nlv19ThT0bvL4qL9+aP8Aqn2Smv8Asn2lP8sf3Q5VNG4jS3xT9+aP+qfZLzH+yfaUT4sf3Q1c1E8dPivJ7W0tukz7JXsX7P67F41Y9sL37Nap0mHQZ/aYHR+6N7mt/ZDVnZL1vebU6S7tivingv1hJ1w5EBAQEBAQEBAQEBAQEBAQEBAQEBB0Vx+bd6FBXfFXEVRTTyRscBGKJz2eBpy1Xzzmm5GxbC7Q6aBXcGCt6RM9eLb1cvmr5clq2mO7b3sHH4HV1LUSVLS35MJXxZWuYC+zxZ2a+awax2YWB7zpv7ht9lesV/m6/X10cZY+0pPF3Ff/AGRQaX+cj9/glWZ2t48/7n0P7N+Nb/Z+cOeSIvDm0z8wlLnHurAx2cQ3Jmy6Zo9La2WfMVm28V72rF7xSa2yRtttHPv3jnvtv3Tzc55oG5XywPGURtJyWFgRqPFoLg8tfJN6xtMw8pXLaZrS8c956/o0VVU0PKNzQQQ7c31GWxLvI/Fd47YvIkzY9ZtztE+T62WH2Wf2dH+nN/McruHxXz3aP/UT6vglqlUhAQEBAQEBAQEBAQEBAQEBAQEBAQaziXEI6amkmlJaxuXMQCTq9rRoNdyF1Ss3tww8mYiN5VXxPjWHVfffhTmGWGnjb+DSnI6KSR5cbDUFshbb1WjhxZsfD4PSZ7479vkp3y48sTtPubTE+M8Onp5IBO5pkjdHmNPIQCRa9rKLHpM1bxbbp54d5NRjms1merUYpjtIaGmpYpTK+F7S4mJ7A5oZIL6+bhooNd2fqM871r379YaHY/auk0lp+1tO3DtyiZ74+TGix0E5sjNdB4XWFjc2132+pUv3RrJnxK+1p27e7Miu32t/7Z+TlNjbctjHGRpuxx296fujWdOCvtc0/aDszi3jNff0T8mgrK+NxJGlzsGmw9EjsjU161j2wt/v/Q3jat5n0xK2uyKcPoTb6M0o+prv6lNGG+Lwb9WNq89M2Tjp0TZFYQEBAQEBAQEBAQEBAQEBAQEBAQEEN7XX2wufzdTD/uIz9isaSP40fXcjy+JKh3rcsyNP0l8C9q8zN/wpgUldM2Jt2t3e+2jGDc+vkuc+euKk2lFh085r8MLNFHFSRD5LRNkaC4F80ZfI82bqARcXOltPZXzOo7Qz28KN31ek7L00eBeY39XvmfU6qMUNe7uKqjFPK6+R7GlmYgXte2/kbgrrS9p5d9pnn5zX9h4qV+0rtaPN1j2K/wCM+FZKCTfvIXHwvtsfyXDr+9b2LUxmr52D92nDbl0T/sQf+BzjpUuPuMMX3FZ2t8ePR+cr+LosVU0ogICAgICAgICAgICAgICAgICAgIIP2xuthrh1lgHweD9is6T8WEWbxJUc8XNgtuzK08eA21LwtXyC7KWQjzbl/isovvGKs7TaEl8GS3SEw4DwueFldHLFJFI6DwXYQSBmzZDzOrdlQ7UtGTFHBO/Vd7IrOLUROSO+OvRxGLvMDWX8Od+gOzcrLWPW99fMr5Wbzw7PvfutIyzbv2jn65Y2E531UDY7l3exH0aHgkn3XUunw2tbiRa/U46YrU75iVgcW0jJo3xvF2uBHoeRHmCtvFaa2iYfHzG8bS03YxGY46uJ27Jxf/IB/SptZO8xPmcY42iYWOqaQQEBAQEBAQEBAQEBAQEBAQEBAQEEA7aifkMbRqXVUTQOpySED6la0f4iHUfhy6eEOEoqSMSSND6hwuXEX7u/0WffzXup1M5J2jo502D7OkRPVKYlUWWfAgiWNcH0Mz5Hx1HcOb4pWMc1waXcyzdpNjpztoFH93rvvw9VunaOWteHi6e1m8DYHSRNdLDnkfmdGXyFpILdw0N0G/ruD0U1qTTkq2zTl5o5xXxLlrY4AfC55a708UYv5mUEeQZf6WlzFg3xTb6+tvrkq3zbZIq2fZxpU1w6ild7yJQf4Qos3i19aaOqeqs6EBAQEBAQEBAQEBAQEBAQEBAQEBBEeP4w99Aw7fK8/vZBMR9dlLinaLT5vzczG+zK+WRl3dB13huYix0GnPa/iabb2cOoUfDO27rijfZpeIeIDTvjhjt3sr2RsuL/ADjyABa+wzNJP5zQBrds+HDxxNp6Qiy5eHaPKj1djtdXVRpaPKPDnu93hDC1rrZT4SAHNHia4k3IsLAW6YceLHx5PcrZMuS9+CjdYhhMuH4e8yTmWZ+YucNGsyQTPjZE3k1rwHbDXWwUVclcuWNo2j5zG+7uaWx453nef0ZnZrUCLC3SHZjp3e5uv2LnWxxZtvQ6087YvaqzHGve59Vc3EwjaeTu6aA5w/WyH9daNNoiMfm+P6KdomZm/n+H6rF7M6oSVlWRs6GkcPQ94f6lm567Ur6ZaVZ3lY6qOxAQEBAQEBAQEBAQEBAQEBAQEBAQV/2q4gKd9A87NqHOd+iGZXfU8q1pqccWjzIc1+CItPlRSnxB8WMszu8EgdEPR5de3rOCferM0i2mnbrH18FaLzXURv0n6+LKY/5TjUTRq2J0sh8nMGS/+lEuIjg00z5do+va7nws8R5Of17EawzGJaWtMsDDI8xtjADbk3jZ7I1106H0Vy2KuTDw2nZVjJNMszEb8vknuPuqzhpkrLtkke4hhNzGw08rQHWAGY6mwAtfa91SxRT7banSNvjC5fi+ymbd/wAmsoMS7jBDY2c+d7R7jnPuOTL+spb4+PU+pHW/Dg3RCfEXS0ccEdO7LFnLpdXZnvfmNzaw1tprsFZmkVyTabde5DS++OKxCYdjkl53HrTZT/05Rb9mQD3KhrPz+K7g51W2qKcQEBAQEBAQEBAQEBAQEBAQEBAQEFU9ub9aNvnUH+WFoaDxpU9d+GheL1BdFS1TfbbZpN7/ADsJDNfcyJ3rIVbx1iLWxz0+f1PsVr23pTJHVJOydpmqqipduGtb75HZj/Aq2u8HHWkJtJPHe15avgTFYabEDLO/IzunNvYnxZWACwHkVY1GObYNqx3osN4rmmZS/jniSGqoiYblomYy92kFxilJF2kjQW5/SCq6bDamXwvJ+cLOXJW1OX1yRXD6SSrbR0TASC6WWTTRsTpcpc48rNiP+YDmFataMc3yT6I9O36q8RN4rT66pT2i41BDak0GZpvlFxCALxktH54bp0BVPTYbW8Pye9azZa1ng8rTdkdQ35eY2XLBTSAEixce8jLnW5a8ugC71cTwbz5XWLaOULlWcnEBAQEBAQEBAQEBAQEBAQEBAQEBBUHbk/5+kb0jnPxdH9y0tB3+r81HX+IhNE/PSVEXOMsnb+iSI5PrMJ/VKt35ZK28vL5fmr0jfDMJPwTjbMNETJ25flL3SPJ0dFF4GwuI6EiU+hBVfUYpzzM1/l9/XdLgyRhiIt3s7C+yt8hz1NS1rSb5Ym5iRy8brAaeRXlu0IiNqV9r2NDvO9pbPFuEJJ5IqKljdBR09zJK/wDvJX2LnNvq91gBfYEkaWso8episTktO9p7vro7thmZilY2iGyx7iumw+IU9EGvkYxsYI1bGGiwzO+k4dOu69waO+a3Hk5Qh1Ovx4Y4MfOfgpuunfLI58ji97iSSdSStW0VpXaOUQpYLWvfeecylPZC+2JNHWGYfwn+lZus8T1tjCvZZawICAgICAgICAgICAgICAgICAgICCmO21/4ZAOkBPxkd9y09B0lQ18+AgFLVSROD4nujcL2LTY2OhHor1qxblMIsczFY2cZZXPcXPcXucblziS5x6knVSUiIjaFXNMzKysC7RBBSxRCF80zG5SSbNsD4dRcnS3JZ2bRxxze1orVewaq1qxTHSbW8kRv8ObDxDiDEq+7S7u47ElkQIGUb5iNSNtzzVf77odP4m9580b++doXY7H7Sz/ibY6z5Z2n2RvPwYVXg74mgyAalzdHA2e22ZrgDo4Zhp5qpqO3NRt4FIr75+Xulodn/spopn+LkteY59OGNp7475jl13hhSUTQ0lozOOgAaSL58huRqbOuNOYXmGmfLlj7za3l83ljzerZa1GfSafBP3KtI7v+6e6do67eeZ59zO7NIu7xOG+l+/aAd7d242PnoNPMLT1U745YGLlK9lmLAgICAgICAgICAgICAgICAgICAgIKO7ZZL4i0fk00XxL5T9y1dDHgev5M3XzyhEMLw2SpeI4xdzrgagXIaXG1zbYFNXra4Jiu29p6R817Qdn21GOclp4aV6ztv6ojv6x6EkpOEcrWvlNg5rnWFyWgRGQZrgAG4y211KycvaOpvHKeGPN85bWHs3QY7bcM3mNvGnlPOI5RHWO/m3FDSQRSd13Ilc2oe0hoMr3UwD8jsjLtBJDOQWdaeK3h+FO/fznZr1iYxb454K8MTyiKV4uW8b8t+W/ektPh9SRcRNpo3ZiRO5gbmcxgPzbQ6+Xu8wJLT6KSuLJafBjb0+rujfp6mfk1Onp49+KY28Xfume+dtt99p8Zj4rhTXhxMzJHgSPaBFZskxcxriGjw+J8kYuXHfYWsLmLRU3icsb+6Ofm9TPydqZaxNcHg8vTbaOkb+SPNs2VXQCnjbFE0knV73akkAXc463PIDYWtsFZi3FO8+xQ229M9Z+aI4e4NxiksLHMQT1BhmA/f+7yU888Nvrvhx/OuNUUogICAgICAgICAgICAgICAgICAgIKG7W33xN/lFCP2SftWtovw2br56O/hLhyUxR1JmbAw5w11i53jzRkgaAHxGxv52WNrsdram15naOUe7Z9R2frcWPQ0wRSbT1nujxuL19I38yTx0VOHOEglqngOcRJKQHZYzKLxMAB1JFiDY/BQUx0tfhnefT8nWXU56YuPHtWI/pjn128ad57u7q2tAKwxkRRNog0DK0Na1mzgc3hvpYG7baPA3BWhFMVOUc/QxL5M2WeK8zv553bGl4eErQ+aYy5gw5gNXN8ZAzHdpbJbbWwKTl4Z2iNnkU36y6sagoKWBzO8EL8oDHOJe5j22cw+I7ZmtNrgFdY/tMlt4jdxknHSvOdkRxLtDY5msbe8sNA5xbn1zW8Oo20uOevNWo0NonzII1tJ9KJ8L17pcUppHnUzt/aBH3D0AUuakVxTEJMdt7bvQiyFoQEBAQEBAQEBAQEBAQEBAQEBAQEHnztQlzYpU/m9y3/AEYz9q2dHH8KPrvZeunwohOOGW3w2mHd97ptYkDxv8RA1IH77bbjN1FYtltu0dNktTHE167FbjZp2tDqinpXCwdGD3sjRc6+EE33Oo6+q7xaeLeLWZ9znNqJ63tDR1vGFJpkjmqiDGQZ5iyMOjHhc2Nh63NjbUq7j0eSesxHo6s/JraR0iZ9LDqeN6+UBolEDAAA2FuQADQAHV23mrVNDhrO8xvPnUM2vzWjaJ29DSVcjnXc5xcTuSSSfUlW4iIjaFCLTad5lqpl5PRcxzzZvDEmWtpT/wATTj4ytH2qjqI3pb0S2MM9HpZYS+ICAgICAgICAgICAgICAgICAgICDzt2jgjE6vNoS9h9QYo7fVZbOln+FX675ZesrM35Q1T8ZqTG2HvntiYMrWNdlba5JvbfUne6ljFTfi25u5tbh2YTB0Viqjl6smNSQqWZkC6QXbrCauCPP37A4HJl+ba4hwd+dysbkc7AbXUGel7bcMptJkx1meOPJ3OdVi+GOcC6kJaO9sA0NsDbKLteL6gnXbOQFBGLPEeN9exoxlwzPi+5poalslfE+JpANRTZW2F7h0Y2HmClq8OKYtPdP5rVOdt4jyPSSwWgICAgICAgICAgICAgICAgICAgICDzl2lQvixKo71vd5352b2fGQAHC5121877LX08xOONlPLWeLojocOqsxKKaT9TLui8tfgpK7KmbevX4yzWgjcH4A/apYhS44meXxc2TMH/AMN+9NnW156RP90vstSzoP8AI1No+odRXL5J/ulhyTN629zQnJNWmSe73yy8AhfPUwxwtMjzLGco1GUPBJfYewBv5KvmyRWk7yt4sNt45R75+MvTK+eaggICAgICAgICAgICAgICAgICAgINNxR+K94XePq8lTGPfjCtDEhsjtSrNSGI1SvJd0e68lHLb0Kis6hOOH/xfvVHIlhOeFfZd6hVMjuOrfrl0ICAgICAgICAgIP/2Q==" alt="Limpador Multiuso Veja 500ml">   
         <p>Limpador Multiuso Veja 500ml: R$ 8.00</p>
         5 unidades
     </div>
-
+<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
 </body>
 </html>
